@@ -1,0 +1,111 @@
+header {
+    grid-area: header;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+body {
+    color: white;
+
+    font-size: 20px;
+}
+
+
+.grid {
+    display: grid;
+
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+        "header  header"
+        "sidebar  flex"
+
+    ;
+
+
+
+}
+
+.sidebar {
+    font-size: 25px;
+    grid-area: sidebar;
+    background-color: rgb(170, 160, 160);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    gap: 0.5em;
+    height: 800px;
+
+}
+
+nav>ul>li {
+
+    list-style-type: none;
+
+}
+
+.flex {
+    height: 800px;
+    width: 100%;
+    margin-left: 2em;
+    margin-top: 2em;
+    grid-area: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1em;
+
+}
+
+.flex>div {
+    height: 40%;
+    width: 40%;
+    background-color: grey;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+
+    background-color: grey;
+
+}
+
+@media screen and (max-width:480px) {
+
+
+    .sidebar {
+        display: none;
+    }
+
+    .flex {
+        flex-flow: row wrap;
+        height: 100%
+    }
+
+
+}
+
+@media screen and (max-width:850px) {
+    .sidebar {
+        display: none;
+
+    }
+
+    .flex {
+        flex-flow: row nowrap;
+    }
+}
