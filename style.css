@@ -18,7 +18,7 @@ body {
 .grid {
     display: grid;
 
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 10% 80%;
     grid-template-rows: 10% 90%;
     grid-template-areas:
         "header  header"
@@ -28,6 +28,12 @@ body {
 
 
 
+}
+
+#logo {
+    width: 50%;
+    height: 10%;
+    border-radius: 50%;
 }
 
 .sidebar {
@@ -40,19 +46,18 @@ body {
 
 
     gap: 0.5em;
-    height: 800px;
+    height: 100%;
 
 }
 
 nav>ul>li {
 
     list-style-type: none;
-
 }
 
 .flex {
     height: 800px;
-    width: 100%;
+    width: 80%;
     margin-left: 2em;
     margin-top: 2em;
     grid-area: flex;
@@ -76,7 +81,10 @@ nav>ul>li {
 a {
     text-decoration: none;
     color: white;
+
 }
+
+
 
 a:hover {
 
@@ -84,20 +92,8 @@ a:hover {
 
 }
 
-@media screen and (max-width:480px) {
 
 
-    .sidebar {
-        display: none;
-    }
-
-    .flex {
-        flex-flow: row wrap;
-        height: 100%
-    }
-
-
-}
 
 @media screen and (max-width:850px) {
     .sidebar {
@@ -108,4 +104,29 @@ a:hover {
     .flex {
         flex-flow: row nowrap;
     }
+
+
+}
+
+@media screen and (max-width:580px) {
+
+
+    .sidebar {
+        display: none;
+    }
+
+    .flex {
+        flex-flow: row wrap;
+        height: 100%;
+
+    }
+
+    .flex>div {
+        width: 120px;
+        height: 120px;
+    }
+
+
+
+
 }
